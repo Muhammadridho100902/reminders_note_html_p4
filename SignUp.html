@@ -1,0 +1,56 @@
+<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+
+<body>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Welcome back,</h2>
+            <label>
+                    <span>Name</span>
+                    <input type="text" id="full_name" placeholder="Full name">
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" id="email" placeholder="Email">
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" id="password" placeholder="New Password">
+            </label>
+            <div class="center-align">
+                <button type="button" class="submit" onclick="register()">Register</button>
+                <p>Don you have an account? <a href="login.html">Login</a></p>
+            </div>
+            <div class="sub-cont">
+                <div class="img">
+                    <div class="img__text m--up">
+                        <h2>New here?</h2>
+                        <p>Sign up and discover great amount of new opportunities!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<script src="firebase.js"></script>
+
+</html>
