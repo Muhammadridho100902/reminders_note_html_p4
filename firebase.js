@@ -22,15 +22,22 @@ const updateBtn = document.getElementById('updateBtn');
 const removeBtn = document.getElementById('removeBtn');
 const showBtn = document.getElementById('showBtn');
 
-const usersRef = database.ref('/todos');
+// const usersRef = database.ref('/todos');
+const usersRef = database.ref('/users/' + user.uid + '/notes');
 
 addBtn.addEventListener('click', e => {
+
+    var user = auth.currentUser
+        // Create User data
     e.preventDefault();
-    usersRef.child(userId.value).set({
+    var newPostKey = Math.floor(Math.random() * 10000);
+    usersRef.child(newPostKey).set({
+        userId_: newPostKey,
         title_: title.value,
         notes_: notes.value,
         date_: date.value
     });
+    window.open("seeNotes.html", "_self")
 });
 
 updateBtn.addEventListener('click', e => {

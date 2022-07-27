@@ -7,6 +7,7 @@ const firebaseConfig = {
     messagingSenderId: "512267870295",
     appId: "1:512267870295:web:751c9274f1ac4614f34312"
 };
+
 //Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -16,7 +17,8 @@ let userNo;
 function selectAllData() {
     document.getElementById("tbody1").innerHTML = "";
     userNo = 0;
-    firebase.database().ref('todos').once('value', (allRecords) => {
+    firebase.database().ref('users/dOJjS5z5c5SfXtgRh2FgHLSSxvK2/notes').once('value', (allRecords) => {
+        // firebase.database().ref('users/').orderByChild('user').equalTo("<% out.print(uid); %>").once('value', (allRecords) => {
         allRecords.forEach(item => {
             console.log(item.val());
             const userId = item.val().userId_;
